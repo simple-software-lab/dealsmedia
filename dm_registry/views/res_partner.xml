@@ -23,9 +23,6 @@
             <field name="code">
                 if record.isa_brand():
                     record.approve_brand()
-                else:
-                    raise Warning(record.name + ' is not a brand.')
-                    
             </field>
         </record>
     </data>
