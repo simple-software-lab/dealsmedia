@@ -6,7 +6,7 @@
             <field name="type">form</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-                <field name="lang" position="after">
+                <field name="vat" position="after">
                     <field name="dashboard" string="Dashboard"/>
                     <field name="location_handle" string="Handle"/>
                     <field name="active_campaigns" string="Active Campaigns"/>
