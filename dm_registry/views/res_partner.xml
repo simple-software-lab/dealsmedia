@@ -6,13 +6,26 @@
             <field name="type">form</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-                <field name="vat" position="after">
+                 <xpath expr="//field[@name='vat']" position="after">
                     <field name="dashboard" string="Dashboard"/>
                     <field name="location_handle" string="Handle"/>
                     <field name="active_campaigns" string="Active Campaigns"/>
                     <field name="follower_count" string="Followers"/>
                     <field name="credit_balance" string="Credit Balance"/>
-                </field>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.server" id="approve_brand">
+            <field name="name">Approve Brand</field>
+            <field name="model_id" ref="model_res_partner"/>
+            <field name="state">code</field>
+            <field name="code">
+                if record.isa_brand():
+                    record.approve_brand()
+                else:
+                    raise Warning(record.name + ' is not a brand.')
+                    
             </field>
         </record>
     </data>
