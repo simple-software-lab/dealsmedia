@@ -6,13 +6,13 @@
             <field name="type">form</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-                 <xpath expr="//field[@name='vat']" position="after">
-                    <field name="dashboard" string="Dashboard"/>
+                <field name="vat" position="after">
+                    <field name="dashboard" string="Dashboard" widget="url" />
                     <field name="location_handle" string="Handle"/>
                     <field name="active_campaigns" string="Active Campaigns"/>
                     <field name="follower_count" string="Followers"/>
                     <field name="credit_balance" string="Credit Balance"/>
-                </xpath>
+                </field>
             </field>
         </record>
 
