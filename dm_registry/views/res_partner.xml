@@ -1,0 +1,15 @@
+<record id="view_res_partner_form_inherit" model="ir.ui.view">
+    <field name="name">Deals Media Fields</field>
+    <field name="model">res.partner</field>
+    <field name="type">form</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+        <field name="lang" position="after">
+            <field name="dashboard" string="Dashboard"/>
+            <field name="location_handle" string="Handle"/>
+            <field name="active_campaigns" string="Active Campaigns"/>
+            <field name="follower_count" string="Followers"/>
+            <field name="credit_balance" string="Credit Balance"/>
+        </field>
+    </field>
+</record>
