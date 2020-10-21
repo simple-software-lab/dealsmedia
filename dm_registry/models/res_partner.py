@@ -15,7 +15,7 @@ class Partner(models.Model):
     follower_count = fields.Integer("Follower Count")
     credit_balance = fields.Integer("Credit Balance")
                                      
-    @api.model
+    @api.multi
     def write(self, vals):
         res = super(Partner, self).write(vals)
         for rec in res:
