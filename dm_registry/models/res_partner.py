@@ -3,6 +3,7 @@
 from odoo import api, fields, models
 from bigoyster import Bigoyster
 import requests
+import os
 
 class Partner(models.Model):
     _name = 'res.partner'
