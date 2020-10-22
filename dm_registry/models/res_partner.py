@@ -25,12 +25,12 @@ class Partner(models.Model):
     @api.model
     def call_event_api(self, event_type, addl_info):
         if os.environ.get('ODOO_STAGE') == 'staging':
-            url = 'https://stageapi.dealsmedia.com/event/create'
+            url = 'https://stageapi.dealsmedia.com/event/create/'
             headers = {
                 'Authorization': "Token b4d38894b61f54b46de2239d9604446506772a69",
             }
         elif os.environ.get('ODOO_STAGE') == 'production':
-            url = 'https://api.dealsmedia.com/event/create'
+            url = 'https://api.dealsmedia.com/event/create/'
             headers = {
                 'Authorization': "Token f7a95eceaef62d1c5338dc20c54a0514c8c0070b",
             }
