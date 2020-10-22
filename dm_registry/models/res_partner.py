@@ -35,7 +35,7 @@ class Partner(models.Model):
                 'Authorization': "Token f7a95eceaef62d1c5338dc20c54a0514c8c0070b",
             }
         params = {
-            'event_type': 'CO003',
+            'event_type': event_type,
             'addl_info': addl_info
         }
         response = requests.post(url, json=params, headers=headers, timeout=5, verify=False)
