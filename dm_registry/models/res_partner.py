@@ -18,8 +18,8 @@ class Partner(models.Model):
 
     def write(self, vals):
         res = super(Partner, self).write(vals)
-        for rec in self:
-            rec.call_event_api('MFG018', {'odoo_id': rec.id})
+        #for rec in self:
+            #rec.call_event_api('MFG018', {'odoo_id': rec.id})
         return res
                                      
     @api.model
